@@ -1,3 +1,189 @@
+
+      var backToTopBtn = $('#backToTop');
+    if (backToTopBtn.length) {
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 300) {
+                backToTopBtn.fadeIn();
+            } else {
+                backToTopBtn.fadeOut();
+            }
+        });
+        backToTopBtn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 700);
+        });
+    }
+/*nav*/
+$( "#nav-btn" ).on( "click", function() {
+    $('#takeover-nav').toggleClass("shown");
+    $('.sticky-nav').toggleClass("difference");
+  });
+
+  
+  ///Initiation Variables
+  var icon_1 = document.getElementById("nav-btn");
+  var topLine_1 = document.getElementById("top-line-1");
+  var middleLine_1 = document.getElementById("middle-line-1");
+  var bottomLine_1 = document.getElementById("bottom-line-1");
+  var state_1 = "menu";  // can be "menu" or "arrow"
+  var topLineY_1;
+  var middleLineY_1;
+  var bottomLineY_1;
+  var topLeftY_1;
+  var topRightY_1;
+  var bottomLeftY_1;
+  var bottomRightY_1;
+  var topLeftX_1;
+  var topRightX_1;
+  var bottomLeftX_1;
+  var bottomRightX_1;
+  
+  ///Animation Variables
+  var segmentDuration_1 = 15;
+  var menuDisappearDurationInFrames_1 = segmentDuration_1;
+  var arrowAppearDurationInFrames_1 = segmentDuration_1;
+  var arrowDisappearDurationInFrames_1 = segmentDuration_1;
+  var menuAppearDurationInFrames_1 = segmentDuration_1;
+  var menuDisappearComplete_1 = false;
+  var arrowAppearComplete_1 = false;
+  var arrowDisappearComplete_1 = false;
+  var menuAppearComplete_1 = false;
+  var currentFrame_1 = 1;
+  
+  ///Menu Disappear 
+  function menuDisappearAnimation_1() {
+      currentFrame_1++;
+      if ( currentFrame_1 <= menuDisappearDurationInFrames_1 ) {
+          window.requestAnimationFrame( ()=> { 
+              //top line
+              topLineY_1 = AJS.easeInBack( 37, 50, menuDisappearDurationInFrames_1, currentFrame_1 );
+              topLine_1.setAttribute( "d", "M30,"+topLineY_1+" L70,"+topLineY_1 );
+              //bottom line
+              bottomLineY_1 = AJS.easeInBack( 63, 50, menuDisappearDurationInFrames_1, currentFrame_1 );
+              bottomLine_1.setAttribute( "d", "M30,"+bottomLineY_1+" L70,"+bottomLineY_1 );
+              //recursion
+              menuDisappearAnimation_1();
+          });
+      } else {
+          middleLine_1.style.opacity = "0";
+          currentFrame_1 = 1;
+          menuDisappearComplete_1 = true;
+          openMenuAnimation_1();
+      }
+  }
+  
+  ///Cross Appear
+  function arrowAppearAnimation_1() {
+      currentFrame_1++;
+      if ( currentFrame_1 <= arrowAppearDurationInFrames_1 ) {
+          window.requestAnimationFrame( ()=> { 
+              //top line
+              topLeftX_1 = AJS.easeOutBack( 30, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+              topLeftY_1 = AJS.easeOutBack( 50, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+              bottomRightX_1 = AJS.easeOutBack( 70, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+              bottomRightY_1 = AJS.easeOutBack( 50, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+              topLine_1.setAttribute( "d", "M" + topLeftX_1 + "," + topLeftY_1 + " L" + bottomRightX_1 + "," + bottomRightY_1 );
+              //bottom line
+              bottomLeftX_1 = AJS.easeOutBack( 30, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+              bottomLeftY_1 = AJS.easeOutBack( 50, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+              topRightX_1 = AJS.easeOutBack( 70, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+              topRightY_1 = AJS.easeOutBack( 50, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+              bottomLine_1.setAttribute( "d", "M" + bottomLeftX_1 + "," + bottomLeftY_1 + " L" + topRightX_1 + "," + topRightY_1 );
+              //recursion
+              arrowAppearAnimation_1();
+          });
+      } else {
+          currentFrame_1 = 1;
+          arrowAppearComplete_1 = true;
+          openMenuAnimation_1();
+      }
+  }
+  
+  ///Combined Open Menu Animation
+  function openMenuAnimation_1() {
+      if ( !menuDisappearComplete_1 ) { 
+          menuDisappearAnimation_1();
+      } else if ( !arrowAppearComplete_1) {
+          arrowAppearAnimation_1();
+      }
+  }
+  
+  ///Cross Disappear
+  function arrowDisappearAnimation_1() {
+      currentFrame_1++;
+      if ( currentFrame_1 <= arrowDisappearDurationInFrames_1 ) {
+          window.requestAnimationFrame( ()=> {
+              //top line
+              topLeftX_1 = AJS.easeInBack( 35, 30, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              topLeftY_1 = AJS.easeInBack( 35, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              bottomRightX_1 = AJS.easeInBack( 65, 70, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              bottomRightY_1 = AJS.easeInBack( 65, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              topLine_1.setAttribute( "d", "M" + topLeftX_1 + "," + topLeftY_1 + " L" + bottomRightX_1 + "," + bottomRightY_1 );
+              //bottom line
+              bottomLeftX_1 = AJS.easeInBack( 35, 30, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              bottomLeftY_1 = AJS.easeInBack( 65, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              topRightX_1 = AJS.easeInBack( 65, 70, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              topRightY_1 = AJS.easeInBack( 35, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+              bottomLine_1.setAttribute( "d", "M" + bottomLeftX_1 + "," + bottomLeftY_1 + " L" + topRightX_1 + "," + topRightY_1 );
+              //recursion
+              arrowDisappearAnimation_1();
+          });
+      } else {
+          middleLine_1.style.opacity = "1";
+          currentFrame_1 = 1;
+          arrowDisappearComplete_1 = true;
+          closeMenuAnimation_1();
+      }
+  }
+  
+  ///Menu Appear
+  function menuAppearAnimation_1() {
+      currentFrame_1++;
+      if ( currentFrame_1 <= menuAppearDurationInFrames_1 ) {
+          window.requestAnimationFrame( ()=> {
+              //top line
+              topLineY_1 = AJS.easeOutBack( 50, 37, menuDisappearDurationInFrames_1, currentFrame_1 );
+              topLine_1.setAttribute( "d", "M30,"+topLineY_1+" L70,"+topLineY_1 );
+              //bottom line
+              bottomLineY_1 = AJS.easeOutBack( 50, 63, menuDisappearDurationInFrames_1, currentFrame_1 );
+              bottomLine_1.setAttribute( "d", "M30,"+bottomLineY_1+" L70,"+bottomLineY_1 );
+              //recursion
+              menuAppearAnimation_1();
+          });
+      } else {
+          currentFrame_1 = 1;
+          menuAppearComplete_1 = true;
+          closeMenuAnimation_1();
+      }
+  }
+  
+  ///Close Menu Animation
+  function closeMenuAnimation_1() {
+      if ( !arrowDisappearComplete_1 ) {
+          arrowDisappearAnimation_1();
+      } else if ( !menuAppearComplete_1 ) {
+          menuAppearAnimation_1();
+      }
+  }
+  
+  ///Events
+  icon_1.addEventListener( "click", ()=> { 
+   
+    if ( state_1 === "menu" ) {
+        openMenuAnimation_1();
+        state_1 = "arrow";
+        arrowDisappearComplete_1 = false;
+          menuAppearComplete_1 = false;
+    } else if ( state_1 === "arrow" ) {
+        closeMenuAnimation_1();
+        state_1 = "menu";
+        menuDisappearComplete_1 = false;
+          arrowAppearComplete_1 = false;
+    }
+  });
+  
+  //end nav 
+
 // إضافة كلاس الأنيميشن لكل section
 $('section').addClass('fade-section').css('opacity', 0);
 
@@ -96,198 +282,32 @@ $(document).ready(function() {
     });
 });
 
-
-
-// تقليب الصور كل  3 ثواني
-(function() {
-    const grid = document.getElementById('galleryGrid');
-    if (!grid) return;
-    const images = [
-        "photo/hacker-cracking-binary-code-data-security.jpg",
-        "photo/2953998.jpg",
-        "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
-        "photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp",
-        "photo/close-up-programmer-typing-keyboard.jpg",
-        "photo/teacher1.avif",
-        "photo/teacher2.avif",
-        "photo/8711572.jpg",
-        "photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp",
-        "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
-    ];
-    let currentStart = 0;
-    function updateGallery() {
-        const imgs = grid.querySelectorAll('.gallery-img');
-        for (let i = 0; i < imgs.length; i++) {
-            const idx = (currentStart + i) % images.length;
-            imgs[i].src = images[idx];
-        }
-        currentStart = (currentStart + 1) % images.length;
+       // حركة عند تمرير الماوس على عناصر القائمة
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {  
+    link.addEventListener('mouseenter', function() {
+        this.classList.add('animate__animated', 'animate__pulse');
     }
-    setInterval(updateGallery, 3000); // كل 3 ثواني
-    // إنشاء الصور في البداية
-    for (let i = 0; i < 3; i++) {
-        const img = document.createElement('img');
-        img.className = 'gallery-img';
-        img.src = images[i % images.length];
-        grid.appendChild(img);
+    );
+    link.addEventListener('mouseleave', function() {
+        this.classList.remove('animate__animated', 'animate__pulse');
     }
-    // تحديث المعرض عند التحميل
-    updateGallery();
-    // إضافة حدث عند النقر على الصور
-    grid.addEventListener('click', function(event) {
-        if (event.target.classList.contains('gallery-img')) {
-            let currentIdx = images.indexOf(event.target.src.replace(location.origin + '/', '').replace(/\\/g, '/'));
-            // معالجة إذا لم يتم العثور على الصورة (لأن src قد يكون مطلق)
-            if (currentIdx === -1) {
-                // محاولة المطابقة فقط باسم الملف
-                const fileName = event.target.src.split('/').pop();
-                currentIdx = images.findIndex(img => img.split('/').pop() === fileName);
-            }
-            if (currentIdx === -1) currentIdx = 0;
-
-            const modal = document.createElement('div');
-            modal.className = 'modal';
-            modal.innerHTML = `
-                <span class="arrow arrow-left">&#10095;</span>
-                <span class="arrow arrow-right">&#10094;</span>
-                <span class="close">&times;</span>
-                <img class="modal-content" src="${images[currentIdx]}">
-            `;
-            document.body.appendChild(modal);
-
-            const modalImg = modal.querySelector('.modal-content');
-            const closeBtn = modal.querySelector('.close');
-            const leftArrow = modal.querySelector('.arrow-left');
-            const rightArrow = modal.querySelector('.arrow-right');
-
-            function showImage(idx) {
-                if (idx < 0) idx = images.length - 1;
-                if (idx >= images.length) idx = 0;
-                currentIdx = idx;
-                modalImg.src = images[currentIdx];
-            }
-
-            leftArrow.onclick = function(e) {
-                e.stopPropagation();
-                showImage(currentIdx - 1);
-            };
-            rightArrow.onclick = function(e) {
-                e.stopPropagation();
-                showImage(currentIdx + 1);
-            };
-            closeBtn.onclick = function() {
-                document.body.removeChild(modal);
-            };
-            // دعم الأسهم من لوحة المفاتيح
-            modal.tabIndex = -1;
-            modal.focus();
-            modal.onkeydown = function(e) {
-                if (e.key === "ArrowLeft") {
-                    showImage(currentIdx - 1);
-                } else if (e.key === "ArrowRight") {
-                    showImage(currentIdx + 1);
-                } else if (e.key === "Escape") {
-                    document.body.removeChild(modal);
-                }
-            };
-        }
-    });
-    // إضافة أنماط للنافذة المنبثقة والأسهم
-    const style = document.createElement('style');
-    style.innerHTML = `
-      .modal {
-        display: flex;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.8);
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-      }
-      .modal-content {
-        max-width: 90%;
-        max-height: 90%;
-        margin: 0 40px;
-        box-shadow: 0 0 20px #000;
-        border-radius: 8px;
-      }
-      .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        color: white;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 1010;
-        user-select: none;
-      }
-      .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-size: 50px;
-        font-weight: bold;
-        cursor: pointer;
-        user-select: none;
-        z-index: 1010;
-        background: rgba(0,0,0,0.2);
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background 0.2s;
-      }
-      .arrow:hover {
-        background: rgba(0,0,0,0.5);
-      }
-      .arrow-left {
-        left: 20px;
-      }
-      .arrow-right {
-        right: 20px;
-      }
-    `;
-    document.head.appendChild(style);
-
-})();
-
-// إضافة تأثيرات على الأزرار
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('mouseover', function() {
-        this.classList.add('btn-hover');
-    });
-    btn.addEventListener('mouseout', function() {
-        this.classList.remove('btn-hover');
-    });
+    );
+});
+// حركة عند تمرير الماوس على زر القائمة المنسدلة
+const dropdownLinks = document.querySelectorAll('.dropdown-item');
+dropdownLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        this.classList.add('animate__animated', 'animate__fadeIn');
+    }
+    );
+    link.addEventListener('mouseleave', function() {
+        this.classList.remove('animate__animated', 'animate__fadeIn');
+    }
+    );
 });
 
-
-
-
-
-// إقائمة الأسئلة الشائعة
- document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const item = this.parentElement;
-        item.classList.toggle('active');
-        // Close others
-        document.querySelectorAll('.faq-item').forEach(other => {
-          if (other !== item) other.classList.remove('active');
-        });
-      });
-    });
-
-
-
-
+    
 
 // Smooth scroll for nav links, card hover, header scroll, contact form, back to top
 $(document).ready(function() {
@@ -336,19 +356,6 @@ $(function() {
   });
 }); 
 
-    var backToTopBtn = $('#backToTop');
-    if (backToTopBtn.length) {
-        $(window).on('scroll', function() {
-            if ($(this).scrollTop() > 300) {
-                backToTopBtn.fadeIn();
-            } else {
-                backToTopBtn.fadeOut();
-            }
-        });
-        backToTopBtn.on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, 700);
-        });
-    }
+
 });
  

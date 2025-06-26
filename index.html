@@ -1,436 +1,214 @@
-<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>مدرسة  الخاصة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
 <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/mine.css">
-
   <link rel="stylesheet" href="css/animate.min.css"/>
-
 </head>
-
 <body>
-  <!-- شريط إعلان أعلى الصفحة -->
-  <div class="top-bar bg-success text-white py-2 text-center">
-    <span>التسجيل مفتوح الآن للعام الدراسي الجديد! سارع بالحجز.</span>
-  </div>
-  <!-- زر العودة للأعلى -->
+
+    <header>
+
+
+
+      <div class='d-flex difference justify-content-between sticky-nav'>
+        <div class="nav">
+        <div class='logo'> School  </div>
+        <div class='box menu' id='nav-btn'>
+          <svg id="i1" class="icon" viewBox="20 30 60 40">
+          <path id="top-line-1"     d="M30,37 L70,37 Z"></path>
+          <path id="middle-line-1" 	d="M30,50 L70,50 Z"></path>
+          <path id="bottom-line-1" 	d="M30,63 L70,63 Z"></path>
+          </svg>
+        </div>
+      </div>
+      </div>
+      <div id='takeover-nav'>
+        <div class='container-fluid'>
+          <div class='row'>
+            <div class='align-items-center bg-black col-12 col-md-7 d-flex justify-content-center nav-col nav-contact order-1 order-md-0 position-relative px-3 py-5'>
+              <div class='bg-topographic h-100 position-absolute w-100'></div>
+              <div class='content position-relative'>
+                <h2 class='mb-5 nav-title white'>
+                    contact us<span class="d-inline green">&period;</span>
+                </h2>
+                <ul class='contact-items list-unstyled mb-5 white'>
+                  <li class='pb-4'>
+                    <a class='text-decoration-none' href='#'>+0123456789</a>
+                  </li>
+                  <li class='pb-4'>
+                    <a class='text-decoration-none' href='#'> info@school.com</a>
+                  </li>
+                  <li>
+                    <a class='text-decoration-none' href='#'>A, P 003</a>
+                  </li>
+                </ul>
+                <div class='social'>
+                  <a class='green text-decoration-none' href='#'>linkedin</a>
+                  <span class='mx-2 white'>
+                    |
+                  </span>
+                  <a class='green text-decoration-none' href='#'>facebook</a>
+                  <span class='mx-2 white'>
+                    |
+                  </span>
+                  <a class='green text-decoration-none' href='#'>instagram</a>
+                </div>
+              </div>
+            </div>
+            <div class='align-items-center bg-green col-12 col-md-5 d-flex nav-col nav-menu order-0 order-md-1 pb-3 pb-md-5 pt-5 px-3 px-md-5'>
+              <ul class='list-unstyled nav-items'>
+                <li class='pb-3'>
+                  <a class='text-decoration-none' href='#'>home</a>
+                </li>
+                <li class='pb-3'>
+                  <a class='text-decoration-none' href='#about'>about</a>
+                </li>
+                <li class='pb-3'>
+                  <a class='text-decoration-none' href='#programes'>programes</a>
+                </li>
+                <li>
+                  <a class='text-decoration-none' href='#contact'>contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+ <!-- زر العودة للأعلى -->
   <a href="#" id="backToTop">
     <i class="fa fa-arrow-up"></i>
   </a>
 
 
-  <header class="navbar">
-   
-    <div class="container">
-      <h1 class="logo">school</h1>
-      <nav class="nav">
-        <div class="dropdown">
-          <button class="btn btn-success dropdown-toggle" type="button" id="navbarDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-            القائمة الرئيسية
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
-        <li><a class="dropdown-item" href="#about">عن المدرسة</a></li>
-        <li><a class="dropdown-item" href="#director">رسالة المدير</a></li>
-        <li><a class="dropdown-item" href="#programs">الأقسام</a></li>
-        <li><a class="dropdown-item" href="#activities">الأنشطة</a></li>
-        <li><a class="dropdown-item" href="#gallery">معرض الصور</a></li>
-        <li><a class="dropdown-item" href="#news">الأخبار</a></li>
-        <li><a class="dropdown-item" href="#faq">الأسئلة الشائعة</a></li>
-        <li><a class="dropdown-item" href="#testimonials">آراء أولياء الأمور</a></li>
-        <li><a class="dropdown-item" href="#team">فريق العمل</a></li>
-        <li><a class="dropdown-item" href="#partners">الشركاء</a></li>
-        <li><a class="dropdown-item" href="#contact">تواصل معنا</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!--  شريط عرض سريع   -->
-  <section class="hero" style="background-image: url('photo/Staples_High_School,_Westport,_CT.jpg');">
-    <div class="container text-center py-5">
-      <h2 class="mb-3">مرحباً بكم في مدرسة  الخاصة</h2>
-      <p class="lead mb-4">نحن نؤمن بأن التعليم هو أساس بناء المستقبل، ونلتزم بتقديم بيئة تعليمية محفزة وآمنة لجميع الطلاب.</p>
-      <a href="#about" class="btn btn-success btn-lg mx-2">تعرف على المزيد</a>
-      <a href="#contact" class="btn btn-outline-primary btn-lg mx-2">تواصل معنا</a>
-    </div>
-  </section>
-
-  <!--  عن المدرسة  -->
-  <section class="about" id="about">
-    <div class="container text-center">
-    <h2>عن المدرسة</h2>
-    <p>
-      مدرسة النور الخاصة تأسست عام 2005، تهدف لتقديم تعليم أكاديمي متميز يركز على بناء شخصية الطالب وتنمية مهاراته الحياتية.
-    </p>
-    <p>
-      نحن نقدم برامج تعليمية متنوعة تشمل الرياضيات، العلوم، اللغات، الفنون، والرياضة. كما نحرص على توفير بيئة تعليمية آمنة ومحفزة تشجع على الإبداع والتفكير النقدي.
-    </p>
-    <p>
-      فريقنا من المعلمين ذوي الخبرة يسعى دائماً لتقديم أفضل تجربة تعليمية للطلاب، مع التركيز على تطوير مهاراتهم الأكاديمية والاجتماعية.
-    </p>
-    <div class="quote">"التعليم هو جواز السفر إلى المستقبل، لأن الغد ينتمي لأولئك الذين يعدون له اليوم."</div>
-    </div>
-    <!--  جدول الإحصائيات  -->
-    <div class="stats-table-container my-4">
-      <h3 class="text-center mb-3">إحصائيات المدرسة</h3>
-      <table class="stats-table table table-bordered text-center">
-        <thead class="table-success">
-          <tr>
-            <th>عدد الطلاب</th>
-            <th>عدد المعلمين</th>
-            <th>عدد الفصول</th>
-            <th>الأنشطة السنوية</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="stat-number" data-count="15000">0</td>
-            <td class="stat-number" data-count="900">0</td>
-            <td class="stat-number" data-count="450">0</td>
-            <td class="stat-number" data-count="8650">0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  </section>
-
-  <!--  رسالة المدير  -->
-  <section class="director" id="director">
-         <div class="holo-container">
-           <h2>رسالة المدير
-            <br>
-            <span class="holo-text">أ. أحمد محمد</span>
-           </h2>
-
-             <p>
-              مرحباً بكم في مدرسة الخاصة، حيث نؤمن بأن التعليم هو المفتاح لفتح آفاق جديدة لأبنائنا. 
-      <br>
-      نحن نسعى لتوفير بيئة تعليمية تشجع على الإبداع والتفكير النقدي، مع التركيز على القيم الإنسانية والأخلاقية
-   <br>
-      أبنائي وبناتي الطلاب، نؤمن بأن كل طالب لديه القدرة على التميز، ودورنا هو توفير البيئة المناسبة لتحقيق ذلك. نرحب بكم في أسرة النور التعليمية.
-    </p>
-    <div class="holo-bg">
-      <div class="holo"></div>
-    </div>
-    <img src="photo/8711572.jpg" alt="صورة المدير" class="holo-img">
-  </div>
-  </section>
-
-  <!-- ====== الأقسام ====== -->
-  <section id="programs" class="programs-section py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">الأقسام</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
-          <div class="program-card shadow-sm h-100 text-center p-4 rounded animate__animated animate__fadeInUp">
-            <img src="photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp" alt="رياض الأطفال" class="program-img mb-3 rounded-circle">
-            <h3 class="program-title mb-2">رياض الأطفال</h3>
-            <p class="program-desc">مرحلة مبكرة لتعليم الأطفال من 3 إلى 6 سنوات، مع أنشطة تفاعلية لتنمية المهارات الأساسية.</p>
+    <section class='align-items-center d-flex hero justify-content-center'>
+      <div class='video-wrap'>
+        <video autoplay="" playsinline="" loop="" muted="" id="video-bg">
+        <source src="photo/3191109-uhd_4096_2160_25fps.mp4" type="video/mp4">
+        <source src="photo/3191109-uhd_4096_2160_25fps.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class='gradient-overlay position-absolute w-100'></div>
+      <div class='content mb-5 position-relative text-center'>
+        <h1 class='blend hero-title'>
+          <span class='d-block'>Welcome to</span>
+          <span class='d-block'>Our School</span>
+          <span class='d-block'>Education is the key</span>
+          <span class='d-block'>to success</span>
+        </h1>
+      </div>
+    </section>
+    <section class='align-items-center d-flex justify-content-center section-1'  id="about">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 col-md-6'>
+            <h2 class='mb-4 section-title'>عن المدرسة</h2>
+            <p class='mb-5 section-text'>
+              مدرستنا تهدف إلى تقديم تعليم عالي الجودة في بيئة محفزة وآمنة. نؤمن بأهمية تطوير مهارات الطلاب الأكاديمية والاجتماعية، ونشجع على الإبداع والتفكير النقدي.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li>✔️ مناهج حديثة ومتطورة</li>
+              <li>✔️ أنشطة رياضية وفنية متنوعة</li>
+              <li>✔️ كادر تعليمي مؤهل</li>
+              <li>✔️ بيئة تعليمية آمنة</li>
+            </ul>
           </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="program-card shadow-sm h-100 text-center p-4 rounded animate__animated animate__fadeInUp" style="animation-delay:0.2s;">
-            <img src="photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp" alt="المرحلة الابتدائية" class="program-img mb-3 rounded-circle">
-            <h3 class="program-title mb-2">المرحلة الابتدائية</h3>
-            <p class="program-desc">تعليم أساسي من الصف الأول إلى السادس، يركز على بناء القيم والمعرفة والمهارات.</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="program-card shadow-sm h-100 text-center p-4 rounded animate__animated animate__fadeInUp" style="animation-delay:0.4s;">
-            <img src="photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif" alt="المرحلة الإعدادية" class="program-img mb-3 rounded-circle">
-            <h3 class="program-title mb-2">المرحلة الإعدادية</h3>
-            <p class="program-desc">تعليم متقدم من الصف السابع إلى التاسع، مع التركيز على التفكير النقدي والاستعداد للمرحلة الثانوية.</p>
+          <div class='col-12 col-md-6'>
+            <img src="photo/photo-1503676382389-4809596d5290.jpeg" alt="صورة " class="img-fluid rounded shadow">
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
- 
-  <!--  الأنشطة المدرسية  -->
-  <section class="activities" id="activities">
-  
-
-    <h2 class="activities-title animate__animated">الأنشطة المدرسية</h2>
-    <p>
-      نؤمن بأن التعليم لا يقتصر على الكتب، لذا نوفر أنشطة رياضية، فنية، علمية، وموسيقية لتطوير مهارات الطلاب.
-    </p>
-    <div class="quote">"العقل السليم في الجسم السليم"</div>
-    <div class="activity-cards">
-      <div class="activity-card">
-       
-        <h3>الأنشطة الرياضية</h3>
-        <p>تشمل كرة القدم، السلة، والسباحة.</p>
-      </div>
-      <div class="activity-card">
-      
-        <h3>الأنشطة الفنية</h3>
-        <p>ورش عمل للرسم، النحت، والموسيقى.</p>
-      </div>
-      <div class="activity-card">
-       
-        <h3>الأنشطة العلمية</h3>
-        <p>مشاريع علمية ومسابقات في مجالات العلوم.</p>
-      </div>
-  </section>
-
-
-  <!--  معرض الصور  -->
-  <section class="gallery">
-    <h2>معرض الصور</h2>
-    <div class="gallery-grid" id="galleryGrid">
-      <img src="photo/hacker-cracking-binary-code-data-security.jpg" alt="صورة المدرسة 1" class="gallery-img">
-      <img src="photo/2953998.jpg" alt="صورة المدرسة 2" class="gallery-img">
-      <img src="photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif" alt="صورة المدرسة 3" class="gallery-img">
-      <img src="photo/close-up-programmer-typing-keyboard.jpg" alt="صورة المدرسة 4" class="gallery-img">
-    </div>
-    <p class="text-center mt-3">
-      <a href="#" class="btn btn-primary">عرض المزيد من الصور</a>
-    </p>
-
-
-  </section>
-
-
-  <!--  الأخبار والتحديثات  -->
-  <section class="news">
-    <h2>آخر الأخبار</h2>
-      <div class="events-circles">
-      <div class="event-circle">
-      <div class="circle-content">
-        <h3>يوم الرياضة</h3>
-        <p>تاريخ: 15 مارس 2025</p>
-        <p>انضموا إلينا في يوم مليء بالأنشطة الرياضية الممتعة.</p>
-      </div>
-      </div>
-      <div class="event-circle">
-      <div class="circle-content">
-        <h3>معرض العلوم</h3>
-        <p>تاريخ: 22 مارس 2025</p>
-        <p>استعرض مشاريع الطلاب في مجالات العلوم والتكنولوجيا.</p>
-      </div>
-      </div>
-      <div class="event-circle">
-      <div class="circle-content">
-        <h3>حفل التخرج</h3>
-        <p>تاريخ: 30 يونيو 2025</p>
-        <p>احتفال بتخرج طلاب المرحلة الثانوية.</p>
-      </div>
-      </div>
-      <div class="event-circle">
-      <div class="circle-content">
-        <h3>حفل تكريم المتفوقين</h3>
-        <p>تاريخ: 10 يوليو 2025</p>
-        <p>تكريم الطلاب المتفوقين في جميع المراحل الدراسية.</p>
-      </div>
-      </div>
-       <div class="event-circle">
-      <div class="circle-content">
-      <h3>افتتاح مختبر العلوم الجديد</h3>
-      <p>يسرنا الإعلان عن افتتاح مختبر العلوم الجديد الذي سيساعد الطلاب في إجراء التجارب العلمية.</p>
-    </div>
-    </div>
-    <div class="event-circle">
-      <div class="circle-content">
-      <h3>نتائج امتحانات الفصل الدراسي الأول</h3>
-      <p>تم نشر نتائج امتحانات الفصل الدراسي الأول، يمكن للطلاب وأولياء الأمور الاطلاع عليها عبر البوابة الإلكترونية.</p>
-    </div>
-    </div>
-      <div class="event-circle">
-      <div class="circle-content">
-      <h3>ورشة عمل للمعلمين</h3>
-      <p>نظمنا ورشة عمل للمعلمين حول استراتيجيات التعليم الحديثة وكيفية دمج التكنولوجيا في الفصول الدراسية.</p>
-    </div>
-    </div>
-    </div>
-  </section>
-
-    <!--  الأسئلة الشائعة  -->
-  <section class="faq">
-    <h2>الأسئلة الشائعة</h2>
-    <div class="faq-item">
-      <button class="faq-question">ما هي مواعيد التسجيل؟</button>
-      <div class="faq-answer">
-        <p>التسجيل مفتوح من 1 يونيو حتى 30 أغسطس من كل عام.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">هل توفرون وسائل النقل للطلاب؟</button>
-      <div class="faq-answer">
-        <p>نعم، نقدم خدمات النقل المدرسي للطلاب في المناطق القريبة.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">ما هي الرسوم الدراسية؟</button>
-      <div class="faq-answer">
-        <p>الرسوم الدراسية تختلف حسب المرحلة التعليمية، يرجى التواصل معنا لمزيد من التفاصيل.</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- آراء أولياء  -->
-  <section class="testimonials">
-    <h2>آراء أولياء الأمور</h2>
-    <div class="testimonials-messages">
-      <div class="testimonial message-left">
-      <div class="testimonial-content">
-        <p>"مدرسة رائعة! ابني يحب الذهاب إلى المدرسة كل يوم."</p>
-        <span class="testimonial-author">- أم أحمد</span>
-      </div>
-      </div>
-      <div class="testimonial message-left">
-      <div class="testimonial-content">
-        <p>"التعليم هنا متميز والمعلمون محترفون جداً."</p>
-        <span class="testimonial-author">- أبو محمد</span>
-      </div>
-      </div>
-      <div class="testimonial message-left">
-      <div class="testimonial-content">
-        <p>"أنشطة المدرسة متنوعة وتساعد على تطوير مهارات الأطفال."</p>
-        <span class="testimonial-author">- أم سارة</span>
-      </div>
-      </div>
-    </div>
-    
-  </section>
-
-
-  <!--  فريق العمل  -->
-  <section class="team" id="team">
-    <div class="container">
-      <h2 class="text-center mb-4">فريق العمل</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-3 col-6 mb-4">
-          <div class="team-member text-center">
-            <img src="photo/8711572.jpg" class="img-fluid rounded-circle mb-2" alt="المدير">
-            <h5>أ. محمد علي</h5>
-            <p>مدير المدرسة</p>
+    </section>
+    <section class='align-items-center d-flex justify-content-center section-2 bg-light'  id="program">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 col-md-6 order-2 order-md-1'>
+            <img src="photo/photo-1513258496099-48168024aec0.jpeg" class="img-fluid rounded shadow">
           </div>
-        </div>
-        <div class="col-md-3 col-6 mb-4">
-          <div class="team-member text-center">
-            <img src="photo/teacher1.avif" class="img-fluid rounded-circle mb-2" alt="معلمة">
-            <h5>أ. فاطمة حسن</h5>
-            <p>معلمة رياضيات</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6 mb-4">
-          <div class="team-member text-center">
-            <img src="photo/teacher2.avif" class="img-fluid rounded-circle mb-2" alt="معلم">
-            <h5>أ. أحمد سعيد</h5>
-            <p>معلم علوم</p>
+          <div class='col-12 col-md-6 order-1 order-md-2'>
+            <h2 class='mb-4 section-title'>برامجنا</h2>
+            <p class='mb-5 section-text'>
+              نقدم مجموعة واسعة من البرامج التعليمية والأنشطة اللامنهجية التي تلبي احتياجات جميع الطلاب، مثل:
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li>📚 برامج تعليمية لجميع المراحل</li>
+              <li>💻 مختبرات حاسوب متقدمة</li>
+              <li>⚽ فرق رياضية ومسابقات</li>
+              <li>🎨 ورش عمل فنية وموسيقية</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!--  الشركاء والداعمين  -->
-  <section class="partners">
-    <h2>شركاؤنا</h2>
-    <p>نحن فخورون بشراكتنا مع العديد من المؤسسات التعليمية والمجتمعية التي تدعم رؤيتنا.</p>
-    <div class="partner-logos">
-      <img src="photo/partner1.png" alt="شريك 1" class="img-fluid">
-      <img src="photo/partner2.png" alt="شريك 2" class="img-fluid">
-      <img src="photo/partner3.png" alt="شريك 3" class="img-fluid">
-    </div>
-  </section>
-
-  
-
-<!-- تواصل معنا -->
-<section class="contact-section py-5" id="contact">
-  <div class="container">
-    <h2 class="text-center mb-4">تواصل معنا</h2>
-    <p class="text-center mb-5">إذا كان لديك أي استفسار أو تحتاج إلى مزيد من المعلومات، لا تتردد في التواصل معنا عبر النموذج أو وسائل التواصل الاجتماعي.</p>
-    <div class="row justify-content-center">
-      <!-- معلومات التواصل -->
-      <div class="col-md-5 mb-4">
-        <div class="contact-info bg-light rounded p-4 h-100 shadow-sm">
-          <h4 class="mb-3">معلومات التواصل</h4>
-          <ul class="list-unstyled mb-4">
-            <li class="mb-2"><i class="fa-solid fa-envelope-open-text me-2 text-success"></i> Info@ITD-eg.com</li>
-            <li class="mb-2"><i class="fa-solid fa-phone me-2 text-success"></i> 0115 22 353 44</li>
-            <li><i class="fa-solid fa-location-dot me-2 text-success"></i> القاهرة، مصر</li>
-          </ul>
-          <h5 class="mb-2">تابعنا على:</h5>
-          <div class="d-flex gap-3 social-icons">
-            <div class="social-i">
-                    <a href="" style="--color: #0072b1">
-                      <i class="fa-solid fa-envelope-open-text"></i>
-                    </a>
-                      <a href="https://www.instagram.com/itd-eg/" style="--color: #e1306c">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                     <a href="https://wa.me/201152235344" style="--color: #35c512">
-                      <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                      <a href="https://www.facebook.com//itd-eg/" style="--color: #4267b2">
-                      <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </ul>
-                </div>
+    </section>
+    <section class='align-items-center d-flex justify-content-center section-3' id="contact">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 col-md-6'>
+            <h2 class='mb-4 section-title'>انضم إلينا</h2>
+            <p class='mb-5 section-text'>
+              نسعى لبناء مجتمع مدرسي متعاون. يمكنكم التواصل معنا أو زيارة المدرسة للتعرف أكثر على خدماتنا.
+            </p>
+            <a href="#contact-form" class="btn btn-success px-4">تواصل معنا</a>
+          </div>
+          <div class='col-12 col-md-6'>
+            <img src="photo/photo-1464983953574-0892a716854b.jpeg" alt="انضم إلينا" class="img-fluid rounded shadow">
           </div>
         </div>
       </div>
-      <!-- نموذج التواصل -->
-      <div class="col-md-7 mb-4">
-        <form class="contact-form bg-white rounded p-4 shadow-sm" id="contactForm" autocomplete="off">
-          <h4 class="mb-3">أرسل رسالة</h4>
-          <div class="mb-3">
-            <label for="name" class="form-label">الاسم</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="اسمك" required>
+    </section>
+    <section id="contact-form" class="align-items-center d-flex justify-content-center section-4 bg-light py-5">
+      <div class="container">
+        <h2 class="mb-4 section-title text-center">نموذج التواصل</h2>
+        <form id="schoolContactForm" class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="name" placeholder="الاسم" required>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">البريد الإلكتروني</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required>
+          <div class="col-md-6">
+            <input type="email" class="form-control" id="email" placeholder="البريد الإلكتروني" required>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">الرسالة</label>
-            <textarea class="form-control" id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+          <div class="col-12">
+            <textarea class="form-control" id="message" rows="4" placeholder="رسالتك" required></textarea>
           </div>
-          <button type="submit" class="btn btn-success w-100">إرسال</button>
-          <div id="formMsg" class="mt-3 text-center" style="display:none;"></div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary px-5">إرسال</button>
+          </div>
+          <div id="formMsg" class="text-center mt-3"></div>
         </form>
       </div>
-    </div>
-    <!-- الخريطة -->
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-8">
-        <div class="map-container rounded overflow-hidden shadow-sm">
-          <h5 class="mb-2 text-center">موقعنا على الخريطة</h5>
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?"
-            style="width:100%; height:300px; border:1px solid #ccc;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+    </section>
+    <footer class='align-items-center d-flex justify-content-center footer bg-dark text-white py-3'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12 col-md-6'>
+            <p class='mb-0 footer-text'>© 2024 مدرستنا. جميع الحقوق محفوظة.</p>
+          </div>
+          <div class='col-12 col-md-6 text-md-end'>
+            <span>للتواصل: info@school.com | 0123456789</span>
+          </div>
+        </div>  
       </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer bg-success text-white py-3 mt-5">
-  <div class="container text-center">
-    <p class="mb-0">&copy; 2025 ITD-eg - جميع الحقوق محفوظة</p>
-  </div>
-</footer>
-
+    </footer>
+    
+ 
+ 
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/all.min.js"></script>
   <script src="js/mine.js"></script>
+  <script src="js/animateAnything.js"></script>
 
-  
- 
 </body>
 </html>
+
+
+
+
+
+
+
+
