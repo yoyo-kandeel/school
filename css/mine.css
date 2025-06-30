@@ -38,7 +38,10 @@ padding: 10px;
  left: 30px;
  
 }
-  
+  .nav ul{
+ display: none;
+ 
+} 
  
 .nav a {
  display: flex;
@@ -64,12 +67,8 @@ padding: 10px;
     z-index: 999;
 }
 
-.nav.drdropdown-menu{
-  position: absolute!important;
-  inset: 0px auto auto 0px!important;
-  margin: 0px!important;
-  transform: translate(0px, 43px)!important;
-}
+
+
   .sticky-nav .logo {
     width: 70%;
     height: 30px;
@@ -239,12 +238,7 @@ img{
   .hero-title {
     font-size: 8vw;
   }
-.nav.drdropdown-menu{
-  position: absolute!important;
-  inset: 0px auto auto 0px!important;
-  margin: 0px!important;
-  transform: translate(0px, 43px)!important;
-}
+
 
 
   #backToTop {
@@ -319,22 +313,13 @@ img{
   @media screen and (min-width: 1200px) {
     .hero { height: 75vh; }
     .hero #video-bg { object-position: 0 0; }
-    .nav.drdropdown-menu{
-  position: absolute!important;
-  inset: 0px auto auto 0px!important;
-  margin: 0px!important;
-  transform: translate(0px, 43px)!important;
-}
+ 
   }
   @media screen and (max-width: 1199px) {
     .hero #video-bg { object-position: 0 0; }
-    .nav.drdropdown-menu{
-  position: absolute!important;
-  inset: 0px auto auto 0px!important;
-  margin: 0px!important;
-  transform: translate(0px, 43px)!important;
+   
 }
-  }
+
   @media screen and (max-width: 767px) {
     header .swoosh { width: 165px; height: 35px; top: 10px; }
     header .sticky-nav { top: 10px; }
@@ -343,11 +328,6 @@ img{
     .hero { min-height: 600px; height: 600px; }
     .hero .hero-title { font-size: 12vw; }
     .hero #video-bg { object-position: 0 0; }
-    .nav.drdropdown-menu{
-  position: absolute!important;
-  inset: 0px auto auto 0px!important;
-  margin: 0px!important;
-  transform: translate(0px, 43px)!important;
-}
+
   }
 
